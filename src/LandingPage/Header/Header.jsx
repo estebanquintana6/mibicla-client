@@ -4,7 +4,7 @@ import Navbar from "/src/LandingPage/Navbar";
 
 import './styles.css';
 
-const Header = ({ imageUrl }) => {
+const Header = () => {
     // TODO: Create a Header
     return (
         <section className="h-screen header-section">
