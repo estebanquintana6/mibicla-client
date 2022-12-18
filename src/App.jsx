@@ -1,16 +1,16 @@
 import React from "react";
 
 import Header from "/src/LandingPage/Header"
+import ServiceSection from "/src/LandingPage/ServiceSection"
 
 import './app.css'; //added line
 
 const App = () => {
-    const name = "Esteban";
 
     return (
         <div>
-            <Header imageUrl={"https://via.placeholder.com/150"}></Header>
-            <h1 className="text-primary text-4xl font-bold">Hello world! I am using {name}</h1>
+            <Header></Header>
+            <ServiceSection></ServiceSection>
         </div>
     );
 };
