@@ -2,9 +2,9 @@ import React from "react";
 
 import './styles.css';
 
-const Button = ({ text }) => {
+const Button = ({ children }) => {
     return (
-        <button>{text}</button>
+        <button>{children}</button>
     );
 }
 
