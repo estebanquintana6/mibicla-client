@@ -4,7 +4,7 @@ import './styles.css';
 
 const Button = ({ children }) => {
     return (
-        <button>{children}</button>
+        <button className="btn">{children}</button>
     );
 }
 
