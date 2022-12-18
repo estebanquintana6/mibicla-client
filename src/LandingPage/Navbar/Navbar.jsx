@@ -7,7 +7,6 @@ import './styles.css';
 const Navbar = () => {
     return (
         <nav>
-            <Button>Hello</Button>
         </nav>
     )
 }
