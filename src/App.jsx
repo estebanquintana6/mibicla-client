@@ -1,7 +1,6 @@
 import React from "react";
 
-import Navbar from "./LandingPage/Navbar/Navbar";
-import Header from "./LandingPage/Header/Header"
+import Header from "/src/LandingPage/Header"
 
 import './app.css'; //added line
 
@@ -10,7 +9,6 @@ const App = () => {
 
     return (
         <div>
-            <Navbar></Navbar>
             <Header imageUrl={"https://via.placeholder.com/150"}></Header>
             <h1 className="text-primary text-4xl font-bold">Hello world! I am using {name}</h1>
         </div>

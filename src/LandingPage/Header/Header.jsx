@@ -1,10 +1,15 @@
 import React from 'react';
 
+import Navbar from "/src/LandingPage/Navbar";
+
+import './styles.css';
+
 const Header = ({ imageUrl }) => {
     // TODO: Create a Header
     return (
-        <div className="flex bg-slate-900 h-screen">
-        </div>
+        <section className="h-screen header-section">
+            <Navbar></Navbar>
+        </section>
     )
 }
 

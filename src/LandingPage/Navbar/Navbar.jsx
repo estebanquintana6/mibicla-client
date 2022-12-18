@@ -1,22 +1,14 @@
 import React from 'react';
 
+import Button from "/src/BasicElements/Button";
+
+import './styles.css';
+
 const Navbar = () => {
-    // TODO: Create navbar component
-    const arr = [
-        'Hello World',
-        'Goodbye World',
-    ]
-
-    const clickHandler = (text) => {
-        alert(text);
-    }
-
     return (
-        <div>
-            {arr.map((text) =>
-                <button className="bg-blue-800 mr-3" onClick={() => clickHandler(text)}>{text}</button>
-            )}
-        </div>
+        <nav>
+            <button>Hello</button>
+        </nav>
     )
 }
 
