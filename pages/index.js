@@ -1,4 +1,4 @@
-import Head from 'next/head'
+import Head from 'next/head';
 import Header from '../components/LandingPage/Header';
 import ServiceSection from '../components/LandingPage/ServiceSection';
 
