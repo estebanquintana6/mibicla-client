@@ -7,17 +7,17 @@ const ResourcesSection = () => {
         <section className={styles["resources-section"]}>
                 <div className={"flex pl-8"}>
                     <div className="w-2/4 justify-start flex flex-column">
-                        <div className="mt-auto mb-auto">
-                            <h1 className="mb-4 text-4xl font-bold tracking-tight leading-none text-primary">Crea el jersey de tu equipo con nosotros.</h1>
-                            <p className="mt-6 mb-6 text-lg font-normal lg:text-xl">
+                        <div className="mt-auto mb-auto bg-black bg-opacity-70 p-4 rounded-xl">
+                            <h1 className="mb-4 text-5xl font-extrabold tracking-tight leading-none text-white">Crea el <span className="text-primary">jersey</span> de tu equipo con nosotros.</h1>
+                            <p className="mt-6 mb-6 text-lg font-normal lg:text-xl text-white">
                                 En Mi Bicla® Querétaro organizamos carreras de MTB y Pista. Checa nuestro calendario y rueda con nosotros en las carreras más competitivas de Querétaro.
                             </p>
                         </div>
                     </div>
-                    <div className={`w-2/4 relative p-2 ${styles["store-div"]}`}>
+                    <div className={`w-2/4 relative p-2 flex`}>
                         <img
-                            className={`${styles["store-img"]}`}
-                            src="https://s3.amazonaws.com/usac-craft-uploads-production/assets/_dynamicArticleList/Team-Scarlett-1130-×-600-px.jpg" 
+                            className={`${styles["store-img"]} ml-auto mr-auto mt-auto mb-auto`}
+                            src="/photos/jersey.JPG" 
                         />
                         { /* <div className="w-2/4 h-1/2 absolute top-[50%] left-[35%] bg-primary z-[-1]">
                         </div>  */ }
