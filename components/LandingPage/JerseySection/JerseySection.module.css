@@ -1,22 +1,13 @@
 .resources-section {
+    background-image: url("https://media.istockphoto.com/id/1077005126/es/foto/carretera-en-el-desierto-de-atacama.jpg?s=612x612&w=0&k=20&c=TZdog1J5UYFXvRdHYj6QQEKtxS4aKbYmvyRwbK0gIEo=");
+    background-size: cover;
     display: flex;
-    height: 65vh;
+    height: 100vh;
     padding: 32px;
 }
 
 .store-img {
-    height: 100%;
+    border-radius: 25px;
+    max-height: 100%;
     position: relative;
-}
-
-.store-div::after {
-    border-color: #d60b30;
-    border-style: solid;
-    border-width: 0 0 10px 10px;
-    bottom: 0;
-    content: " ";
-    height: 75%;
-    left: 0;
-    position: absolute;
-    width: 75%;
 }

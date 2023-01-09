@@ -1,7 +1,8 @@
 import Head from 'next/head';
+
+import Navbar from '../components/LandingPage/Navbar';
 import Header from '../components/LandingPage/Header';
 import ServiceSection from '../components/LandingPage/ServiceSection';
-import EventCardsSection from '../components/LandingPage/EventCardsSection';
 import StoreSection from '../components/LandingPage/JerseySection';
 import ProductsSection from '../components/LandingPage/ProductsSection';
 
@@ -15,6 +16,7 @@ export default function Home({ events }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
+        <Navbar></Navbar>
         <Header></Header>
         <ServiceSection></ServiceSection>
         <StoreSection></StoreSection>

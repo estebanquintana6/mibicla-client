@@ -36,13 +36,13 @@ const Carousel = () => {
                     <button className={`${styles.carouselBtn} right-1`} onClick={(e) => handleButtonClick(e, 1)}>{">"}</button>
                     <ul ref={slidesRef}>
                         <li className={styles.slide} data-active>
-                            <img src="./img/photos/Foto1.jpg" alt="Photo1" />
+                            <img src="/photos/carousel/1.JPG" alt="Photo1" />
                         </li>
                         <li className={styles.slide}>
-                            <img src="./img/photos/foto2.jpg" alt="Photo2" />
+                            <img src="/photos/carousel/2.JPG" alt="Photo2" />
                         </li>
                         <li className={styles.slide}>
-                            <img src="./img/photos/foto3.jpg" alt="Photo2" />
+                            <img src="/photos/carousel/3.JPG" alt="Photo2" />
                         </li>
                     </ul>
                 </div>
