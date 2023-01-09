@@ -3,7 +3,7 @@ import Head from 'next/head';
 import Navbar from '../components/LandingPage/Navbar';
 import Header from '../components/LandingPage/Header';
 import ServiceSection from '../components/LandingPage/ServiceSection';
-import StoreSection from '../components/LandingPage/JerseySection';
+import JerseySection from '../components/LandingPage/JerseySection';
 import ProductsSection from '../components/LandingPage/ProductsSection';
 
 export default function Home({ events }) {
@@ -19,8 +19,8 @@ export default function Home({ events }) {
         <Navbar></Navbar>
         <Header></Header>
         <ServiceSection></ServiceSection>
-        <StoreSection></StoreSection>
         <ProductsSection></ProductsSection>
+        <JerseySection></JerseySection>
       </main>
     </>
   )
