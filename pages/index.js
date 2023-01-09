@@ -3,6 +3,7 @@ import Header from '../components/LandingPage/Header';
 import ServiceSection from '../components/LandingPage/ServiceSection';
 import EventCardsSection from '../components/LandingPage/EventCardsSection';
 import StoreSection from '../components/LandingPage/JerseySection';
+import ProductsSection from '../components/LandingPage/ProductsSection';
 
 export default function Home({ events }) {
   return (
@@ -17,6 +18,7 @@ export default function Home({ events }) {
         <Header></Header>
         <ServiceSection></ServiceSection>
         <StoreSection></StoreSection>
+        <ProductsSection></ProductsSection>
       </main>
     </>
   )
