@@ -1,0 +1,22 @@
+.resources-section {
+    display: flex;
+    height: 65vh;
+    padding: 32px;
+}
+
+.store-img {
+    height: 100%;
+    position: relative;
+}
+
+.store-div::after {
+    border-color: #d60b30;
+    border-style: solid;
+    border-width: 0 0 10px 10px;
+    bottom: 0;
+    content: " ";
+    height: 75%;
+    left: 0;
+    position: absolute;
+    width: 75%;
+}
