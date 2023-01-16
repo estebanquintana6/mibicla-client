@@ -7,7 +7,7 @@ import styles from "./ServiceSection.module.css";
 const ServiceSection = () => {
     return (
         <section className={`${styles.container} bg-white`}>
-            <div className={`${styles.imagediv}`}>
+            <div className={`${styles.imagediv} xs:bg-[-50px] md:bg-[0px]`}>
             </div>
             <div className={`${styles.descriptionContainer} md:w-2/5 xs:w-full md:left-[60%] xs:left-0 md:bg-black md:bg-opacity-70 rounded-xl md:backdrop-blur-sm`}>
                 <hr className="my-4 mx-auto w-100 h-1 bg-gray-100 rounded border-0 md:my-10 dark:bg-white" />
