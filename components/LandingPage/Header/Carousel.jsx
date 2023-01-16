@@ -27,7 +27,8 @@ const Carousel = () => {
             <div className={styles.carouselContainer}>
                 <div className={styles.logoContainer}>
                     <Image
-                        alt="Vercel logo"
+                        alt="Logo"
+                        fill
                         src={logo}
                     />
                 </div>
