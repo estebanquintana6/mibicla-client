@@ -30,6 +30,7 @@ const RegisterModal = ({ eventList, setEventList }) => {
     const createEvent = async () => {
         const { status, data } = await axios.post("/events/register", {
             name: nameRef.current.value,
+            description: descriptionRef.current.value,
             date: dateRef.current.value,
             capacity: capacityRef.current.value,
             price: priceRef.current.value

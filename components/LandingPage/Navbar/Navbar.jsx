@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 
 import Image from 'next/image';
+import Link from 'next/link';
 
 import { useRouter } from 'next/router'
 
@@ -30,16 +31,20 @@ const Navbar = () => {
                 <div className="items-center space-x-1">
                     <ul className="hidden space-x-2 md:inline-flex">
                     <li className="flex flex-row justify-center">
-                        <a href="/" onClick={(e) => goTo(e, '/')} className="px-4 py-2 font-semibold text-gray-600 rounded">Home</a>
+                        <Link href="/" onClick={(e) => goTo(e, '/')} className="px-4 py-2 font-semibold text-gray-600 rounded">Home</Link>
                     </li>
                     <li className="flex flex-row justify-center">
                         <a href="#" className="px-4 py-2 font-semibold text-gray-600 rounded">Tienda</a>
                     </li>
                     <li className="flex flex-row justify-center">
-                        <a href="#"><span className="text-2xl font-extrabold text-blue-600"><Image src={"/simple_logo_red.svg"} width="65" height={"30"} /></span></a>
+                        <a href="#">
+                            <span className="text-2xl font-extrabold text-blue-600">
+                                <Image alt="logo" src={"/simple_logo_red.svg"} width="65" height={"30"} />
+                            </span>
+                        </a>
                     </li>
                     <li className="flex flex-row justify-center">
-                        <a href="/eventos" onClick={(e) => goTo(e, '/eventos')} className="px-4 py-2 font-semibold text-gray-600 rounded">Eventos</a>
+                        <Link href="/eventos" onClick={(e) => goTo(e, '/eventos')} className="px-4 py-2 font-semibold text-gray-600 rounded">Eventos</Link>
                     </li>
                     <li className="flex flex-row justify-center">
                         <a href="#" className="px-4 py-2 font-semibold text-gray-600 rounded">Contáctanos</a>
