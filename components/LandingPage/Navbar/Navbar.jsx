@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 
 import Image from 'next/image';
 
+import { useRouter } from 'next/router'
 
 const Navbar = () => {
     const [open, setOpen] = useState(false);
@@ -16,13 +17,20 @@ const Navbar = () => {
         setOpen(false);
     }
 
+    const router = useRouter()
+    
+    const goTo = (e, path) => {
+        e.preventDefault();
+        router.push(path);
+    }
+
     return (
         <header className="sticky top-0 bg-white text-center w-full px-2 py-4 z-50">
             <div className="items-center justify-between mx-auto max-w-7xl">
                 <div className="items-center space-x-1">
                     <ul className="hidden space-x-2 md:inline-flex">
                     <li className="flex flex-row justify-center">
-                        <a href="#" className="px-4 py-2 font-semibold text-gray-600 rounded">Home</a>
+                        <a href="/" onClick={(e) => goTo(e, '/')} className="px-4 py-2 font-semibold text-gray-600 rounded">Home</a>
                     </li>
                     <li className="flex flex-row justify-center">
                         <a href="#" className="px-4 py-2 font-semibold text-gray-600 rounded">Tienda</a>
@@ -31,7 +39,7 @@ const Navbar = () => {
                         <a href="#"><span className="text-2xl font-extrabold text-blue-600"><Image src={"/simple_logo_red.svg"} width="65" height={"30"} /></span></a>
                     </li>
                     <li className="flex flex-row justify-center">
-                        <a href="#" className="px-4 py-2 font-semibold text-gray-600 rounded">Servicios</a>
+                        <a href="/eventos" onClick={(e) => goTo(e, '/eventos')} className="px-4 py-2 font-semibold text-gray-600 rounded">Eventos</a>
                     </li>
                     <li className="flex flex-row justify-center">
                         <a href="#" className="px-4 py-2 font-semibold text-gray-600 rounded">Contáctanos</a>

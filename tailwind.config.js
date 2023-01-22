@@ -21,6 +21,5 @@ module.exports = {
       ...defaultTheme.screens,
     }
   },
-  important: true,
   plugins: [],
 }

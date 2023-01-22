@@ -1,11 +1,11 @@
 import Head from 'next/head';
 
-import Navbar from '../components/LandingPage/Navbar';
-import Header from '../components/LandingPage/Header';
-import ServiceSection from '../components/LandingPage/ServiceSection';
-import JerseySection from '../components/LandingPage/JerseySection';
-import ProductsSection from '../components/LandingPage/ProductsSection';
-import ContactForm from '../components/LandingPage/ContactForm/ContactForm';
+import Navbar from '@components/LandingPage/Navbar';
+import Header from '@components/LandingPage/Header';
+import ServiceSection from '@components/LandingPage/ServiceSection';
+import JerseySection from '@components/LandingPage/JerseySection';
+import ProductsSection from '@components/LandingPage/ProductsSection';
+import ContactForm from '@components/LandingPage/ContactForm/ContactForm';
 
 export default function Home({ events }) {
   return (

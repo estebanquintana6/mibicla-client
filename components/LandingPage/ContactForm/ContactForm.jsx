@@ -1,6 +1,6 @@
 import React from "react";
 
-import Button from "../../BasicElements/Button";
+import Button from "@components/BasicElements/Button";
 
 const ContactForm = () => {
     return (

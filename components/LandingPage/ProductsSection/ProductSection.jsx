@@ -1,5 +1,4 @@
 import React from "react";
-import styles from "./ProductSection.module.css";
 
 const ProductSection = () => {
     return (
