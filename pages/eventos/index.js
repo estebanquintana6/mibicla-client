@@ -4,8 +4,12 @@ import EventsPage from '@components/EventsPage';
 
 import axios from "@utils/axios";
 
+import getConfig from 'next/config';
+const { publicRuntimeConfig } = getConfig();
+
+import { mockEventList } from "@utils/mocks";
+
 export default function Eventos({ events }) {
-  console.log(events);
   return (
     <>
       <Head>
@@ -23,10 +27,19 @@ export default function Eventos({ events }) {
 }
 
 export async function getServerSideProps() {
-  const { data } = await axios.get('/events');
-  return { 
-    props: { 
-        events: data
-    }   
+  if (publicRuntimeConfig.env === "prod" || 
+    publicRuntimeConfig.env === "local") {
+    const { data } = await axios.get('/events');
+    return { 
+      props: { 
+          events: data
+      }   
+    }
+  } else {
+    return {
+      props: {
+        events: mockEventList
+      }
+    }
   }
 }

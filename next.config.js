@@ -4,6 +4,7 @@ const nextConfig = {
   publicRuntimeConfig: {
     // Will be available on both server and client
     backendUrl: process.env.SERVER_URL,
+    env: process.env.ENV,
   },
 }
 

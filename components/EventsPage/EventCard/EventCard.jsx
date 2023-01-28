@@ -37,7 +37,7 @@ const EventCard = ({
                         Distancia: {distance}
                     </p>
                 </div>
-                <div class="mx-2">
+                <div className="mx-2">
                     <hr className="mx-auto w-100 h-1 bg-primary rounded border-0 md:my-4" />
                 </div>
                 <div className="px-6 pt-4 pb-2">
