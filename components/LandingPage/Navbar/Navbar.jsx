@@ -64,7 +64,7 @@ const Navbar = () => {
                                         <Link href="/" className="px-4 py-2 font-semibold text-gray-600 rounded">Home</Link>
                                     </li>
                                     <li><a href="#" className="px-4 py-2 font-semibold text-gray-600 rounded">Tienda</a></li>
-                                    <li><a href="/eventos" className="px-4 py-2 font-semibold text-gray-600 rounded">Eventos</a></li>
+                                    <li><Link href="/eventos" className="px-4 py-2 font-semibold text-gray-600 rounded">Eventos</Link></li>
                                     <li><a href="#" className="px-4 py-2 font-semibold text-gray-600 rounded">Contáctanos</a></li>
                                 </ul>
                             </div>
