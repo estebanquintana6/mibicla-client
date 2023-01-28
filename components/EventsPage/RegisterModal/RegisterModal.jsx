@@ -41,6 +41,9 @@ const RegisterModal = ({ eventList, setEventList }) => {
                 ...eventList,
                 data
             ])
+            swal("Éxito", "Evento guardado!", "success");
+        } else {
+            
         }
     }
 
@@ -63,7 +66,6 @@ const RegisterModal = ({ eventList, setEventList }) => {
         if(validForm) {
             createEvent();
             setShowModal(false);
-            swal("Éxito", "Evento guardado!", "success");
         }
     }
 
