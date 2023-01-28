@@ -3,5 +3,6 @@ export const isNotEmpty = (str) => {
 }
 
 export const isNotZero = (num) => {
-    return num !== 0 && num != undefined;
+    num = Number(num);
+    return num !== 0 && num != undefined && num != NaN;
 }

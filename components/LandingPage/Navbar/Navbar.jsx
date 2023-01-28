@@ -3,8 +3,6 @@ import React, { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 
-import { useRouter } from 'next/router'
-
 const Navbar = () => {
     const [open, setOpen] = useState(false);
 
@@ -18,20 +16,13 @@ const Navbar = () => {
         setOpen(false);
     }
 
-    const router = useRouter()
-    
-    const goTo = (e, path) => {
-        e.preventDefault();
-        router.push(path);
-    }
-
     return (
-        <header className="sticky top-0 bg-white text-center w-full px-2 py-4 z-50">
+        <header className="sticky top-0 bg-tertiary text-center w-full px-2 py-4 z-50">
             <div className="items-center justify-between mx-auto max-w-7xl">
                 <div className="items-center space-x-1">
                     <ul className="hidden space-x-2 md:inline-flex">
                     <li className="flex flex-row justify-center">
-                        <Link href="/" onClick={(e) => goTo(e, '/')} className="px-4 py-2 font-semibold text-gray-600 rounded">Home</Link>
+                        <Link href="/" className="px-4 py-2 font-semibold text-gray-600 rounded">Home</Link>
                     </li>
                     <li className="flex flex-row justify-center">
                         <a href="#" className="px-4 py-2 font-semibold text-gray-600 rounded">Tienda</a>
@@ -44,7 +35,7 @@ const Navbar = () => {
                         </a>
                     </li>
                     <li className="flex flex-row justify-center">
-                        <Link href="/eventos" onClick={(e) => goTo(e, '/eventos')} className="px-4 py-2 font-semibold text-gray-600 rounded">Eventos</Link>
+                        <Link href="/eventos" className="px-4 py-2 font-semibold text-gray-600 rounded">Eventos</Link>
                     </li>
                     <li className="flex flex-row justify-center">
                         <a href="#" className="px-4 py-2 font-semibold text-gray-600 rounded">Contáctanos</a>
@@ -60,7 +51,7 @@ const Navbar = () => {
                         </button>
                         {open && 
                             <div
-                            className="absolute top-0 left-0 right-0 z-50 flex flex-col p-2 pb-4 m-2 space-y-3 bg-white rounded shadow" x-cloak="true">
+                            className="absolute top-0 left-0 right-0 z-50 flex flex-col p-2 pb-4 m-2 space-y-3 bg-tertiary rounded shadow" x-cloak="true">
                                 <button className="self-end flex-none px-2 ml-2" onClick={closeMenu}>
                                     <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="none" viewBox="0 0 24 24"
                                         stroke="currentColor">
@@ -69,11 +60,12 @@ const Navbar = () => {
                                     <span className="sr-only">Close Menu</span>
                                 </button>
                                 <ul className="space-y-2">
-                                <li><a href="#" className="px-4 py-2 font-semibold text-gray-600 rounded">Home</a></li>
-                                <li><a href="#" className="px-4 py-2 font-semibold text-gray-600 rounded">Blogs</a></li>
-                                <li><a href="#" className="px-4 py-2 font-semibold text-gray-600 rounded">About Us</a></li>
-                                <li><a href="#" className="px-4 py-2 font-semibold text-gray-600 rounded">Contact Us</a></li>
-
+                                    <li>
+                                        <Link href="/" className="px-4 py-2 font-semibold text-gray-600 rounded">Home</Link>
+                                    </li>
+                                    <li><a href="#" className="px-4 py-2 font-semibold text-gray-600 rounded">Tienda</a></li>
+                                    <li><a href="/eventos" className="px-4 py-2 font-semibold text-gray-600 rounded">Eventos</a></li>
+                                    <li><a href="#" className="px-4 py-2 font-semibold text-gray-600 rounded">Contáctanos</a></li>
                                 </ul>
                             </div>
                         }
