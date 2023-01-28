@@ -85,7 +85,7 @@ const RegisterModal = ({ eventList, setEventList }) => {
 
     const addTag = () => {
         const tag = tagRef.current.value;
-        setTags([...new Set(...tags, tag)]);
+        setTags([...new Set([...tags, tag])]);
         tagRef.current.value = "";
     }
 
