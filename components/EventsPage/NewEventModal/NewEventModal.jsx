@@ -263,7 +263,7 @@ const RegisterModal = ({ eventList, setEventList }) => {
                                         </div>
                                     </div>
                                 </form>
-                                <div class='px-2 pt-2 pb-11 mb-3 flex flex-wrap rounded-lg bg-white mx-4'>
+                                <div class='px-2 pt-2 pb-11 mb-3 flex flex-wrap rounded-lg bg-white sm:mx-4'>
                                     {tags.map((tag, index) => 
                                         <span
                                             key={index}
