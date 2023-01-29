@@ -109,7 +109,7 @@ const RegisterModal = ({ eventList, setEventList }) => {
 
     return (
         <>
-            <div className="flex px-4 flex-row-reverse">
+            <div className="flex px-4 flex-row-reverse xs:justify-center sm:justify-start">
                 <Button small fill onClick={openModal}>
                     <div className="flex align-middle">
                         <PlusIcon className="inline h-[20px] my-auto mr-1" />

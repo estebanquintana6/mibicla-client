@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import Navbar from '@components/LandingPage/Navbar';
 import EventsPage from '@components/EventsPage';
+import Footer from '@components/BasicElements/Footer';
 
 import axios from "@utils/axios";
 
@@ -21,6 +22,7 @@ export default function Eventos({ events }) {
       <main>
         <Navbar></Navbar>
         <EventsPage events={events}></EventsPage>
+        <Footer></Footer>
       </main>
     </>
   )

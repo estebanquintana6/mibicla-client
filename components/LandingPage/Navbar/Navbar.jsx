@@ -38,7 +38,7 @@ const Navbar = () => {
                         <Link href="/eventos" className="px-4 py-2 font-semibold text-gray-600 rounded">Eventos</Link>
                     </li>
                     <li className="flex flex-row justify-center">
-                        <a href="#" className="px-4 py-2 font-semibold text-gray-600 rounded">Contáctanos</a>
+                        <Link href="/#contactanos" className="px-4 py-2 font-semibold text-gray-600 rounded">Contáctanos</Link>
                     </li>
                     </ul>
                     <div className="inline-flex md:hidden">
@@ -65,7 +65,7 @@ const Navbar = () => {
                                     </li>
                                     <li><a href="#" className="px-4 py-2 font-semibold text-gray-600 rounded">Tienda</a></li>
                                     <li><Link href="/eventos" className="px-4 py-2 font-semibold text-gray-600 rounded">Eventos</Link></li>
-                                    <li><a href="#" className="px-4 py-2 font-semibold text-gray-600 rounded">Contáctanos</a></li>
+                                    <li><Link href="/#contactanos" className="px-4 py-2 font-semibold text-gray-600 rounded">Contáctanos</Link></li>
                                 </ul>
                             </div>
                         }

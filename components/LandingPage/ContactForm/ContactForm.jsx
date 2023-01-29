@@ -4,7 +4,7 @@ import Button from "@components/BasicElements/Button";
 
 const ContactForm = () => {
     return (
-        <section className="h-screen bg-gradient-to-r from-gray-800 to-black xs:px-0 xs:pt-[36px] md:p-[36px] flex">
+        <section id="contactanos" className="h-screen bg-gradient-to-r from-gray-800 to-black xs:px-0 xs:pt-[36px] md:p-[36px] flex">
             <div className="xs:mx-0 xs:my-auto md:mx-auto md:my-auto bg-black bg-opacity-70 xs:px-4 xs:py-16 md:p-4 rounded-xl xs:w-full md:w-2/5">
                 <h1 className="mb-4 text-5xl font-extrabold tracking-tight leading-none text-white text-center md:text-5xl lg:text-6xl">Contáctanos</h1>
                 <form>

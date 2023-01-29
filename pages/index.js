@@ -6,6 +6,7 @@ import ServiceSection from '@components/LandingPage/ServiceSection';
 import JerseySection from '@components/LandingPage/JerseySection';
 import ProductsSection from '@components/LandingPage/ProductsSection';
 import ContactForm from '@components/LandingPage/ContactForm/ContactForm';
+import Footer from '@components/BasicElements/Footer';
 
 export default function Home({ events }) {
   return (
@@ -23,6 +24,7 @@ export default function Home({ events }) {
         <ProductsSection></ProductsSection>
         <JerseySection></JerseySection>
         <ContactForm></ContactForm>
+        <Footer></Footer>
       </main>
     </>
   )
