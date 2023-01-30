@@ -1,6 +1,6 @@
 import Head from 'next/head';
 
-import Navbar from '@components/LandingPage/Navbar';
+import Navbar from '@components/BasicElements/Navbar';
 import Header from '@components/LandingPage/Header';
 import ServiceSection from '@components/LandingPage/ServiceSection';
 import JerseySection from '@components/LandingPage/JerseySection';

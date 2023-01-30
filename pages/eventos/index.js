@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import Navbar from '@components/LandingPage/Navbar';
+import Navbar from '@components/BasicElements/Navbar';
 import EventsPage from '@components/EventsPage';
 import Footer from '@components/BasicElements/Footer';
 
