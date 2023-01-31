@@ -5,7 +5,7 @@ import RegisterModal from '@components/EventsPage/NewEventModal';
 
 const EventList = ({ eventList, setEventList }) => {
     return (
-        <section className="bg-white h-screen py-6">
+        <section className="bg-white py-6">
             <RegisterModal 
                 setEventList={setEventList} 
                 eventList={eventList}/>
