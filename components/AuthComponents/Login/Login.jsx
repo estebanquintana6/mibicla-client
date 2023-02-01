@@ -4,10 +4,15 @@ import Image from 'next/image';
 
 import axios from "@utils/axios";
 import swal from 'sweetalert';
-import { useRouter } from 'next/router'
+import { useRouter } from 'next/router';
+
+import { useDispatch } from 'react-redux';
+import { setToken } from "@store/userReducer";
 
 const Login = () => {
     const router = useRouter();
+    const dispatch = useDispatch();
+
     const [error, setError] = useState(false);
 
     const formRef = useRef();
@@ -22,6 +27,9 @@ const Login = () => {
             
             const { status } = res;
             if ( status === 200) {
+                const { data: { token } } = res;
+                localStorage.setItem("user", token);
+                dispatch(setToken(token));
                 router.push("/eventos");
             } else {
                 const { response: { data: { error } } } = res;

@@ -1,10 +1,22 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 import Image from 'next/image';
 import Link from 'next/link';
 
+import { setToken } from "@store/userReducer";
+import { useDispatch, useSelector } from 'react-redux';
+
 const Navbar = () => {
+    const dispatch = useDispatch();
+    const user = useSelector((state) => state.user.token);
+
     const [open, setOpen] = useState(false);
+
+    useEffect(() => {
+        if(localStorage.getItem("user")) {
+            dispatch(setToken(localStorage.getItem("user")));
+        }
+    }, [])
 
     const openMenu = (e) => {
         e.preventDefault();
@@ -14,6 +26,11 @@ const Navbar = () => {
     const closeMenu = (e) => {
         e.preventDefault();
         setOpen(false);
+    }
+
+    const logOut = () => {
+        localStorage.removeItem("user");
+        dispatch(setToken(localStorage.getItem(null)));
     }
 
     return (
@@ -40,6 +57,11 @@ const Navbar = () => {
                     <li className="flex flex-row justify-center">
                         <Link href="/#contactanos" className="px-4 py-2 font-semibold text-gray-600 rounded">Contáctanos</Link>
                     </li>
+                    { user &&
+                        <li className="flex flex-row justify-center">
+                            <Link href="#" onClick={logOut} className="px-4 py-2 font-semibold text-primary rounded">Cerrar sesión</Link>
+                        </li>
+                    }
                     </ul>
                     <div className="inline-flex md:hidden">
                         <button className="flex-none px-2" onClick={openMenu}>
