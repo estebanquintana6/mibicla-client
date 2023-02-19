@@ -17,15 +17,15 @@ const Navbar = () => {
     }
 
     return (
-        <header className="sticky top-0 bg-tertiary text-center w-full px-2 py-4 z-50">
+        <header className="sticky top-0 bg-blueish text-center w-full px-2 py-4 z-50">
             <div className="items-center justify-between mx-auto max-w-7xl">
                 <div className="items-center space-x-1">
                     <ul className="hidden space-x-2 md:inline-flex">
                     <li className="flex flex-row justify-center">
-                        <Link href="/" className="px-4 py-2 font-semibold text-gray-600 rounded">Home</Link>
+                        <Link href="/" className="px-4 py-2 font-semibold text-tertiary rounded">Home</Link>
                     </li>
                     <li className="flex flex-row justify-center">
-                        <a href="#" className="px-4 py-2 font-semibold text-gray-600 rounded">Tienda</a>
+                        <a href="#" className="px-4 py-2 font-semibold text-tertiary rounded">Tienda</a>
                     </li>
                     <li className="flex flex-row justify-center">
                         <a href="#">
@@ -35,10 +35,10 @@ const Navbar = () => {
                         </a>
                     </li>
                     <li className="flex flex-row justify-center">
-                        <Link href="/eventos" className="px-4 py-2 font-semibold text-gray-600 rounded">Eventos</Link>
+                        <Link href="/eventos" className="px-4 py-2 font-semibold text-tertiary rounded">Eventos</Link>
                     </li>
                     <li className="flex flex-row justify-center">
-                        <Link href="/#contactanos" className="px-4 py-2 font-semibold text-gray-600 rounded">Contáctanos</Link>
+                        <Link href="/#contactanos" className="px-4 py-2 font-semibold text-tertiary rounded">Contáctanos</Link>
                     </li>
                     </ul>
                     <div className="inline-flex md:hidden">

@@ -13,7 +13,8 @@ module.exports = {
             primary: '#CE1212',
             secondary: '#810000',
             tertiary: '#EEEBDD',
-            black: '#1B1717'
+            black: '#1B1717',
+            blueish: '#00001a'
         },
     },
     screens: {

@@ -2,7 +2,7 @@ import React from "react";
 
 const ProductSection = () => {
     return (
-        <div className="bg-gradient-to-r from-gray-800 to-black p-[36px]">
+        <div className="bg-gradient-to-r from-black to-neutral-900 p-[36px]">
             <h1 className="mb-10 text-4xl font-extrabold tracking-tight leading-none md:text-5xl lg:text-6xl text-white text-center">Nuestros <span className="text-primary">productos.</span></h1>
             <div className="grid md:grid-cols-4 xs:grid-cols-[repeat(2,minmax(150px,_2fr))] xs:grid-rows-[repeat(2,minmax(150px,_2fr))] md:grid-rows-1 gap-4 justify-between">
                 <div className="mx-2 md:w-full">

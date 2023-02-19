@@ -2,7 +2,7 @@ import React, { useRef } from "react";
 
 import Image from 'next/image'
 
-import logo from '/public/logo.svg';
+import logo from '/public/logo_white.svg';
 
 import styles from './Carousel.module.css';
 
