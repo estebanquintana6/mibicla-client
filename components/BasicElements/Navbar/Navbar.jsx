@@ -5,6 +5,8 @@ import Link from 'next/link';
 
 import { setToken } from "@store/userReducer";
 import { useDispatch, useSelector } from 'react-redux';
+import { getSession } from "api/session";
+
 import axios from "@utils/axios";
 
 const Navbar = () => {
@@ -17,6 +19,12 @@ const Navbar = () => {
         if(localStorage.getItem("user")) {
             dispatch(setToken(localStorage.getItem("user")));
         }
+
+        getSession()
+            .then(() => {})
+            .catch(() => {
+            localStorage.removeItem("user");
+        });
     }, [])
 
     const openMenu = (e) => {
@@ -32,7 +40,7 @@ const Navbar = () => {
     const logOut = () => {
         localStorage.removeItem("user");
         axios.defaults.headers.common['Authorization'] = null;
-        dispatch(setToken(localStorage.getItem(null)));
+        dispatch(setToken(null));
     }
 
     return (
