@@ -7,3 +7,12 @@ export const getUsers = async () => {
         }
     });
 }
+
+export const newAdmin = async (email) => {
+    return await axios.post('/users/send_register_invitation', {
+        headers: {
+            Authorization: localStorage.getItem("user")
+        },
+        email
+    });
+}

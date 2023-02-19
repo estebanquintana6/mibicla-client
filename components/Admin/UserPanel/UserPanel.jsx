@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
+import RegisterAdmin from "./RegisterAdmin";
 import Sidebar from "@components/Admin/Sidebar";
-import { useEffect } from "react";
 
 import { getUsers } from "api/users";
 
@@ -20,11 +20,13 @@ const UserPanel = () => {
         }
     }, [])
 
-    var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+    var options = { year: 'numeric', month: 'long', day: 'numeric' };
 
     return (
         <>
             <Sidebar/>
+            <RegisterAdmin />
+
             <div className="p-4 sm:ml-64">
             <div className="relative overflow-x-auto">
                 <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400">
