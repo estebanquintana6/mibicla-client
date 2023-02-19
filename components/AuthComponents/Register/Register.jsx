@@ -6,19 +6,20 @@ import axios from "@utils/axios";
 import swal from 'sweetalert';
 import { useRouter } from 'next/router'
 
-import { validateEmail, isNotEmpty } from "@utils/validators";
+import { isNotEmpty } from "@utils/validators";
 
-const Register = () => {
+const Register = ({ email }) => {
     const router = useRouter();
     const [errors, setErrors] = useState({
         name: false,
-        email: false,
         password: false,
     });
 
     const [passwordError, setPasswordError] = useState("");
 
     const formRef = useRef();
+
+    const { token } = router.query;
 
     const validatePassword = (password, confirmationPassword) => {
         if (password.length < 8) {
@@ -36,17 +37,16 @@ const Register = () => {
 
     const validateForm = ({ name, email, ...args}) => {
         setErrors({
-            email: !validateEmail(email),
             name: !isNotEmpty(name),
             password: !validatePassword(args["password"], args["confirm-password"])
         })
     }
 
-    const postData = async ({ email, name, password}) => {
+    const postData = async ({ name, password}) => {
         const res = await axios.post("/users/register", {
             name,
             password,
-            email
+            register_token: token
         });
 
         const { status } = res;
@@ -96,10 +96,7 @@ const Register = () => {
                         </div>
                         <div>
                             <label htmlFor="email" className="block mb-2 text-sm font-medium text-white">Tu email</label>
-                            <input type="email" name="email" id="email" className={`border sm:text-sm rounded-lg block w-full p-2.5 bg-gray-700 placeholder-gray-400 text-white focus:ring-blue-500 ${errorBorder(errors.email)}`} placeholder="name@gmail.com" required="" />
-                            {errors.email &&
-                                <p className="ml-2 text-xs peer-invalid:visible text-gray-200">Correo inválido</p>
-                            }
+                            <input type="email" name="email" id="email" value={email} disabled className={`border sm:text-sm rounded-lg block w-full p-2.5 bg-gray-700 placeholder-gray-400 text-white focus:ring-blue-500 ${errorBorder(errors.email)}`} placeholder="name@gmail.com" />
                         </div>
                         <div>
                             <label htmlFor="password" className="block mb-2 text-sm font-medium text-white">Contraseña</label>

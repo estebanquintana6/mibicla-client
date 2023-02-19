@@ -5,6 +5,7 @@ import Link from 'next/link';
 
 import { setToken } from "@store/userReducer";
 import { useDispatch, useSelector } from 'react-redux';
+import axios from "@utils/axios";
 
 const Navbar = () => {
     const dispatch = useDispatch();

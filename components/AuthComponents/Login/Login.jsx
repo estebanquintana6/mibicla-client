@@ -31,7 +31,7 @@ const Login = () => {
                 localStorage.setItem("user", token);
                 axios.defaults.headers.common['Authorization'] = token;
                 dispatch(setToken(token));
-                router.push("/eventos");
+                router.push("/admin");
             } else {
                 const { response: { data: { error } } } = res;
                 swal("Error", error, "error");
