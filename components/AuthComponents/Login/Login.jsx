@@ -29,6 +29,7 @@ const Login = () => {
             if ( status === 200) {
                 const { data: { token } } = res;
                 localStorage.setItem("user", token);
+                axios.defaults.headers.common['Authorization'] = token;
                 dispatch(setToken(token));
                 router.push("/eventos");
             } else {

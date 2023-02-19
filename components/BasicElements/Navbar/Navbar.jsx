@@ -30,6 +30,7 @@ const Navbar = () => {
 
     const logOut = () => {
         localStorage.removeItem("user");
+        axios.defaults.headers.common['Authorization'] = null;
         dispatch(setToken(localStorage.getItem(null)));
     }
 
