@@ -1,9 +1,11 @@
 import Head from 'next/head';
 
-import UserPanel from '@components/Admin/UserPanel';
+import EventPanel from '@components/Admin/EventPanel';
 import Sidebar from "@components/Admin/Sidebar";
 
-export default function PanelUsuarios() {
+import axios from "@utils/axios";
+
+export default function PanelEventos({ events }) {
     return (
         <>
             <Head>
@@ -12,8 +14,17 @@ export default function PanelUsuarios() {
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
                 <link rel="icon" href="/simple_logo_red.svg" />
             </Head>
-            <Sidebar/>
-            <UserPanel></UserPanel>
+            <Sidebar></Sidebar>
+            <EventPanel events={events}></EventPanel>
         </>
     )
 }
+
+export async function getServerSideProps() {
+    const { data } = await axios.get('/events');
+    return { 
+        props: { 
+            events: data
+        }
+    }
+  }

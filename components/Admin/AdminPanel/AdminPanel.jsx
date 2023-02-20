@@ -6,7 +6,6 @@ import RegisterModal from '@components/EventsPage/NewEventModal';
 const AdminPanel = () => {
     return (
         <div>
-            <RegisterModal></RegisterModal>
             <Sidebar/>
 
             <div className="p-4 sm:ml-64">

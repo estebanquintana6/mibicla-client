@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 
 import RegisterAdmin from "./RegisterAdmin";
-import Sidebar from "@components/Admin/Sidebar";
 
 import { getUsers } from "api/users";
 
@@ -24,7 +23,6 @@ const UserPanel = () => {
 
     return (
         <>
-            <Sidebar/>
             <RegisterAdmin />
 
             <div className="p-4 sm:ml-64">
