@@ -21,7 +21,7 @@ const Sidebar = () => {
         getSession()
             .then(() => {})
             .catch(() => {
-                Router.push('/');
+                Router.push('/admin/login');
                 localStorage.removeItem("user")
             });
     }, []);
