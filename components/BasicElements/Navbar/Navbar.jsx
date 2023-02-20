@@ -48,30 +48,35 @@ const Navbar = () => {
             <div className="items-center justify-between mx-auto max-w-7xl">
                 <div className="items-center space-x-1">
                     <ul className="hidden space-x-2 md:inline-flex">
-                    <li className="flex flex-row justify-center">
-                        <Link href="/" className="px-4 py-2 font-semibold text-tertiary rounded">Home</Link>
-                    </li>
-                    <li className="flex flex-row justify-center">
-                        <a href="#" className="px-4 py-2 font-semibold text-tertiary rounded">Tienda</a>
-                    </li>
-                    <li className="flex flex-row justify-center">
-                        <a href="#">
-                            <span className="text-2xl font-extrabold text-blue-600">
-                                <Image alt="logo" src={"/simple_logo_red.svg"} width="65" height={"30"} />
-                            </span>
-                        </a>
-                    </li>
-                    <li className="flex flex-row justify-center">
-                        <Link href="/eventos" className="px-4 py-2 font-semibold text-tertiary rounded">Eventos</Link>
-                    </li>
-                    <li className="flex flex-row justify-center">
-                        <Link href="/#contactanos" className="px-4 py-2 font-semibold text-tertiary rounded">Contáctanos</Link>
-                    </li>
-                    { user &&
+                        { user &&
+                            <li className="flex flex-row justify-center">
+                                <Link href="/admin" className="px-4 py-2 font-semibold text-tertiary rounded">Panel de admin</Link>
+                            </li>
+                        }
                         <li className="flex flex-row justify-center">
-                            <Link href="#" onClick={logOut} className="px-4 py-2 font-semibold text-primary rounded">Cerrar sesión</Link>
+                            <Link href="/" className="px-4 py-2 font-semibold text-tertiary rounded">Home</Link>
                         </li>
-                    }
+                        <li className="flex flex-row justify-center">
+                            <a href="#" className="px-4 py-2 font-semibold text-tertiary rounded">Tienda</a>
+                        </li>
+                        <li className="flex flex-row justify-center">
+                            <a href="#">
+                                <span className="text-2xl font-extrabold text-blue-600">
+                                    <Image alt="logo" src={"/simple_logo_red.svg"} width="65" height={"30"} />
+                                </span>
+                            </a>
+                        </li>
+                        <li className="flex flex-row justify-center">
+                            <Link href="/eventos" className="px-4 py-2 font-semibold text-tertiary rounded">Eventos</Link>
+                        </li>
+                        <li className="flex flex-row justify-center">
+                            <Link href="/#contactanos" className="px-4 py-2 font-semibold text-tertiary rounded">Contáctanos</Link>
+                        </li>
+                        { user &&
+                            <li className="flex flex-row justify-center">
+                                <Link href="#" onClick={logOut} className="px-4 py-2 font-semibold text-primary rounded">Cerrar sesión</Link>
+                            </li>
+                        }
                     </ul>
                     <div className="inline-flex md:hidden">
                         <button className="flex-none px-2" onClick={openMenu}>
@@ -92,6 +97,11 @@ const Navbar = () => {
                                     <span className="sr-only">Close Menu</span>
                                 </button>
                                 <ul className="space-y-2">
+                                    { user &&
+                                        <li>
+                                            <Link href="/admin" className="px-4 py-2 font-semibold text-tertiary rounded">Panel de admin</Link>
+                                        </li>
+                                    }
                                     <li>
                                         <Link href="/" className="px-4 py-2 font-semibold text-white rounded">Home</Link>
                                     </li>
