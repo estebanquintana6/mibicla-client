@@ -76,28 +76,33 @@ const Navbar = () => {
                     <div className="inline-flex md:hidden">
                         <button className="flex-none px-2" onClick={openMenu}>
                             <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="none" viewBox="0 0 24 24"
-                            stroke="currentColor">
+                            stroke="white">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 8h16M4 16h16" />
                             </svg>
                             <span className="sr-only">Open Menu</span>
                         </button>
                         {open && 
                             <div
-                            className="absolute top-0 left-0 right-0 z-50 flex flex-col p-2 pb-4 m-2 space-y-3 bg-tertiary rounded shadow" x-cloak="true">
+                            className="absolute top-0 left-0 right-0 z-50 flex flex-col p-2 pb-4 m-2 space-y-3 bg-blueish rounded shadow" x-cloak="true">
                                 <button className="self-end flex-none px-2 ml-2" onClick={closeMenu}>
                                     <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="none" viewBox="0 0 24 24"
-                                        stroke="currentColor">
+                                        stroke="white">
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
                                     </svg>
                                     <span className="sr-only">Close Menu</span>
                                 </button>
                                 <ul className="space-y-2">
                                     <li>
-                                        <Link href="/" className="px-4 py-2 font-semibold text-gray-600 rounded">Home</Link>
+                                        <Link href="/" className="px-4 py-2 font-semibold text-white rounded">Home</Link>
                                     </li>
-                                    <li><a href="#" className="px-4 py-2 font-semibold text-gray-600 rounded">Tienda</a></li>
-                                    <li><Link href="/eventos" className="px-4 py-2 font-semibold text-gray-600 rounded">Eventos</Link></li>
-                                    <li><Link href="/#contactanos" className="px-4 py-2 font-semibold text-gray-600 rounded">Contáctanos</Link></li>
+                                    <li><a href="#" className="px-4 py-2 font-semibold text-white rounded">Tienda</a></li>
+                                    <li><Link href="/eventos" className="px-4 py-2 font-semibold text-white rounded">Eventos</Link></li>
+                                    <li><Link href="/#contactanos" className="px-4 py-2 font-semibold text-white rounded">Contáctanos</Link></li>
+                                    { user &&
+                                        <li>
+                                            <Link href="#" onClick={logOut} className="px-4 py-2 font-semibold text-primary rounded">Cerrar sesión</Link>
+                                        </li>
+                                    }
                                 </ul>
                             </div>
                         }
