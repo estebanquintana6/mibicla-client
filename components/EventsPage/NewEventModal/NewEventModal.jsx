@@ -9,7 +9,7 @@ import { isNotEmpty, isNotZero } from "@utils/validators";
 
 import { PlusIcon } from "@heroicons/react/20/solid";
 
-const RegisterModal = ({ eventList, setEventList }) => {
+const RegisterModal = () => {
     const [showModal, setShowModal] = useState(false);
     const [errors, setErrors] = useState({
         name: false,
@@ -48,10 +48,6 @@ const RegisterModal = ({ eventList, setEventList }) => {
             });
 
             if (status === 200) {
-                setEventList([
-                    ...eventList,
-                    data
-                ])
                 swal("Éxito", "Evento guardado!", "success");
             }
         } catch({ message }) {
@@ -144,7 +140,7 @@ const RegisterModal = ({ eventList, setEventList }) => {
                                 <form>
                                     <div className="w-full flex xs:flex-col md:flex-row flex-wrap">
                                         <div className="mb-4 xs:w-full md:w-2/4 md:px-4">
-                                            <label className="block text-white text-sm font-bold mb-2" for="name">
+                                            <label className="block text-white text-sm font-bold mb-2" htmlFor="name">
                                                 Nombre del evento
                                             </label>
                                             <input 
@@ -156,7 +152,7 @@ const RegisterModal = ({ eventList, setEventList }) => {
                                             />
                                         </div>
                                         <div className="mb-4 xs:w-full md:w-2/4 md:px-4">
-                                            <label className="block text-white text-sm font-bold mb-2" for="date">
+                                            <label className="block text-white text-sm font-bold mb-2" htmlFor="date">
                                                 Fecha
                                             </label>
                                             <input 
@@ -169,7 +165,7 @@ const RegisterModal = ({ eventList, setEventList }) => {
                                             />
                                         </div>
                                         <div className="mb-4 xs:w-full md:w-2/4 md:px-4">
-                                            <label className="block text-white text-sm font-bold mb-2" for="place">
+                                            <label className="block text-white text-sm font-bold mb-2" htmlFor="place">
                                                 Lugar
                                             </label>
                                             <input 
@@ -181,7 +177,7 @@ const RegisterModal = ({ eventList, setEventList }) => {
                                             />
                                         </div>
                                         <div className="mb-4 xs:w-full md:w-2/4 md:px-4">
-                                            <label className="block text-white text-sm font-bold mb-2" for="photo">
+                                            <label className="block text-white text-sm font-bold mb-2" htmlFor="photo">
                                                 Foto
                                             </label>
                                             <input 
@@ -195,7 +191,7 @@ const RegisterModal = ({ eventList, setEventList }) => {
                                     </div>
                                     <div className="w-full flex overflow-y-auto flex-wrap">
                                         <div className="mb-6 xs:w-2/4 md:w-1/3 md:px-4 xs:pr-2">
-                                            <label className="block text-white text-sm font-bold mb-2" for="price">
+                                            <label className="block text-white text-sm font-bold mb-2" htmlFor="price">
                                                 Precio
                                             </label>
                                             <input 
@@ -207,7 +203,7 @@ const RegisterModal = ({ eventList, setEventList }) => {
                                             />
                                         </div>
                                         <div className="mb-6 xs:w-2/4 md:w-1/3 md:px-4 xs:pl-2">
-                                            <label className="block text-white text-sm font-bold mb-2" for="capacity">
+                                            <label className="block text-white text-sm font-bold mb-2" htmlFor="capacity">
                                                 Capacidad
                                             </label>
                                             <input
@@ -219,7 +215,7 @@ const RegisterModal = ({ eventList, setEventList }) => {
                                             />
                                         </div>
                                         <div className="mb-6 xs:w-2/4 md:w-1/3 md:px-4">
-                                            <label className="block text-white text-sm font-bold mb-2" for="distance">
+                                            <label className="block text-white text-sm font-bold mb-2" htmlFor="distance">
                                                 Distancia
                                             </label>
                                             <input
@@ -233,7 +229,7 @@ const RegisterModal = ({ eventList, setEventList }) => {
                                     </div>
                                     <div className="w-full flex">
                                         <div className="mb-6 w-full md:mx-4">
-                                            <label className="block text-white text-sm font-bold mb-2" for="description">
+                                            <label className="block text-white text-sm font-bold mb-2" htmlFor="description">
                                                 Descripción
                                             </label>
                                             <textarea
@@ -247,7 +243,7 @@ const RegisterModal = ({ eventList, setEventList }) => {
 
                                     <div className="flex flex-col items-center mt-1 text-sm sm:flex-row sm:space-y-0 sm:space-x-4 md:mx-4">
                                         <div className="w-full sm:mb-2">
-                                            <label className="block text-white text-sm font-bold mb-2" for="tags">
+                                            <label className="block text-white text-sm font-bold mb-2" htmlFor="tags">
                                                 Tags
                                             </label>
 
@@ -263,13 +259,13 @@ const RegisterModal = ({ eventList, setEventList }) => {
                                         </div>
                                     </div>
                                 </form>
-                                <div class='px-2 pt-2 pb-11 mb-3 flex flex-wrap rounded-lg bg-white sm:mx-4'>
+                                <div className='px-2 pt-2 pb-11 mb-3 flex flex-wrap rounded-lg bg-white sm:mx-4'>
                                     {tags.map((tag, index) => 
                                         <span
                                             key={index}
-                                            class="flex flex-wrap pl-4 pr-2 py-2 m-1 justify-between items-center text-sm font-medium rounded-xl cursor-pointer bg-gray-700 text-gray-200 hover:bg-gray-800 hover:text-gray-100">
+                                            className="flex flex-wrap pl-4 pr-2 py-2 m-1 justify-between items-center text-sm font-medium rounded-xl cursor-pointer bg-gray-700 text-gray-200 hover:bg-gray-800 hover:text-gray-100">
                                             {tag}
-                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-3 hover:text-gray-300" viewBox="0 0 20 20"
+                                            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-3 hover:text-gray-300" viewBox="0 0 20 20"
                                             fill="currentColor">
                                             <path fill-rule="evenodd" onClick={removeTag.bind(this, tag)}
                                                 d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z"
