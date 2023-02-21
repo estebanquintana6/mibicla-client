@@ -17,10 +17,12 @@ module.exports = {
             blueish: '#00001a'
         },
     },
+    
     screens: {
       'xs': '350px',
       ...defaultTheme.screens,
-    }
+    },
+
   },
   plugins: [],
 }
