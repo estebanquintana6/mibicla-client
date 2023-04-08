@@ -19,7 +19,7 @@ const UserPanel = () => {
         }
     }, [])
 
-    var options = { year: 'numeric', month: 'long', day: 'numeric' };
+    const options = { year: 'numeric', month: 'long', day: 'numeric' };
 
     return (
         <>
