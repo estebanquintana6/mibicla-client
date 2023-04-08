@@ -6,7 +6,7 @@ import WarningIcon from '@mui/icons-material/Warning';
 
 const DifficultySection = () => {
     return (
-        <div className="bg-gradient-to-r from-black to-neutral-900 p-[36px]">
+        <div className="bg-gradient-to-r from-black to-neutral-900 py-10 px-16">
             <h2 className='text-4xl font-extrabold text-center mb-1 text-primary p-5'>Grados de Dificultad</h2>
             <div className="flex">
                 <div className="flex-row items-center self-auto m-4 basis-1/2">

@@ -43,14 +43,12 @@ const EventInfo = ({ event }) => {
     return (
         <section>
             <div className={`${styles["resources-section"]} p-4 h-screen`}>
-                <div className="md:w-2/5 w-full md:bg-black md:bg-opacity-70 rounded-xl md:backdrop-blur-sm">
-                    <div className="rounded-xl p-10 pt-60">
-                        <hr className="my-4 mx-auto w-100 h-1 bg-gray-100 rounded border-0 md:my-10 dark:bg-tertiary" />
+                <div className="md:w-2/5 w-full md:bg-black md:bg-opacity-70 rounded-xl md:backdrop-blur-sm h-full flex">
+                    <div className="rounded-xl px-10 mx-auto flex flex-col mt-auto mb-16">
+                        <hr className="mb-4 w-100 h-1 rounded border-0 bg-tertiary" />
                         <h1 className="align-middle mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl lg:text-6xl text-tertiary">{name}</h1>
                         <h2 className='text-2xl font-extrabold text-center m-3 text-primary tracking-normal '>{dateString}</h2>
-                        <div className="flex">
-                            <Button small fill className="text-lg font-extrabold text-center text-primary ml-auto mr-auto tracking-wide">Registrarme</Button>
-                        </div>
+                        <Button small fill className="text-lg font-extrabold text-center text-primary mx-auto tracking-wide">Registrarme</Button>
                     </div>
                 </div>
             </div>
