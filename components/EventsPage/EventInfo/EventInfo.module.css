@@ -1,8 +1,17 @@
-
-
 .resources-section {
     background-image: url("/photos/jersey1.JPG");
     background-size: cover;
     background-repeat: no-repeat;
+}
 
+@media only screen and (max-width: 600px) {
+    .overlay {
+        background-color: rgba(0, 0, 0, 0.7);
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        position: relative;
+        z-index: 1;
+    }
 }

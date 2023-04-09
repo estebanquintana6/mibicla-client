@@ -70,20 +70,22 @@ const EventInfo = ({ event }) => {
     return (
         <section>
             <div className={`${styles["resources-section"]} p-4 h-screen`}>
-                <div className="md:w-2/5 w-full md:bg-black md:bg-opacity-70 rounded-xl md:backdrop-blur-sm h-full flex">
-                    <div className="rounded-xl px-10 mx-auto flex flex-col mt-auto mb-16">
-                        <hr className="mb-4 w-100 h-1 rounded border-0 bg-tertiary" />
-                        <h1 className="align-middle mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl lg:text-6xl text-tertiary">{name}</h1>
-                        <h2 className='text-2xl font-extrabold text-center m-3 text-primary tracking-normal '>{dateString}</h2>
-                        <Button small fill className="text-lg font-extrabold text-center text-primary mx-auto tracking-wide">Registrarme</Button>
+                <div className={`${styles["overlay"]} sm:h-full`}>
+                    <div className="md:w-2/5 w-full md:bg-black md:bg-opacity-70 rounded-xl md:backdrop-blur-sm h-full flex">
+                        <div className="rounded-xl px-10 mx-auto flex flex-col mt-auto mb-16">
+                            <hr className="mb-4 w-100 h-1 rounded border-0 bg-tertiary" />
+                            <h1 className="align-middle mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl lg:text-6xl text-tertiary">{name}</h1>
+                            <h2 className='text-2xl font-extrabold text-center m-3 text-primary tracking-normal '>{dateString}</h2>
+                            <Button small fill className="text-lg font-extrabold text-center text-primary mx-auto tracking-wide">Registrarme</Button>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <div className={`${styles["resources-section"]} p-4 flex h-screen`}>
+            <div className={`${styles["resources-section"]} p-4 flex sm:h-screen`}>
                 <div className="w-screen md:bg-black md:bg-opacity-70 rounded-xl">
-                    <div className="rounded-xl p-5 flex">
-                        <div className="flex-row p-5">
+                    <div className="rounded-xl p-5 flex xs:flex-col sm:flex-row">
+                        <div className="p-5 xs:w-full sm:w-1/3">
                             <h2 className='text-5xl font-extrabold text-center mb-1 text-primary p-5'>Detalles</h2>
                             <div className="flex mb-1">
                                 <h2 className='text-lg font-bold text-left mr-2 text-tertiary'>Distancia: </h2>
@@ -111,7 +113,7 @@ const EventInfo = ({ event }) => {
                                 <InstagramIcon onClick={goToIg} className="w=2/5 ml-auto mr-auto m-0" sx={{ color: "#CE1212" }} fontSize="large" />
                             </div>
                         </div>
-                        <div className="flex flex-col mt-5 px-5">
+                        <div className="flex flex-col mt-5 px-5 xs:w-full sm:w-1/3">
                             <h2 className='text-5xl font-extrabold text-center mb-1 text-primary p-5'>Lugar de inicio</h2>
                             {
                                 isLoaded ? (
