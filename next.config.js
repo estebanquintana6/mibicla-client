@@ -5,6 +5,7 @@ const nextConfig = {
     // Will be available on both server and client
     backendUrl: process.env.SERVER_URL,
     env: process.env.ENV,
+    mapsApiKey: process.env.MAPS_API_KEY
   },
 }
 

@@ -1,14 +1,36 @@
 import React from "react";
-import EventList from "@components/EventsPage/EventList";
 
-import RegisterModal from "@components/EventsPage/NewEventModal/NewEventModal";
+import Router from 'next/router';
+
+import { PlusIcon } from "@heroicons/react/20/solid";
+
+import EventList from "@components/EventsPage/EventList";
+import Button from "@components/BasicElements/Button";
+import AdminSectionTitle from "@components/BasicElements/AdminSectionTitle";
+
 
 const EventPanel = ({ events }) => {
+
+    const toNewEventPage = () => {
+        Router.push('/admin/panel/eventos/nuevo');
+    }
+
     return (
-        <div className="sm:ml-64">
-            <RegisterModal></RegisterModal>
-            <EventList eventList={events} admin/>
-        </div>
+        <section className="sm:ml-64 p-5">
+            <AdminSectionTitle title={"Eventos"}/>
+            <div id="event-actions" className="flex">
+                <div className="mt-3 mr-6 ml-auto">
+                    <Button small fill onClick={toNewEventPage}>
+                        <div className="flex align-middle">
+                            <PlusIcon className="inline h-[20px] my-auto mr-1" />
+                            Nuevo evento
+                        </div>
+                    </Button>
+                </div>
+            </div>
+
+            <EventList eventList={events} admin />
+        </section>
     );
 }
 
