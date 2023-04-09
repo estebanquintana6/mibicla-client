@@ -3,10 +3,10 @@ import Image from 'next/image';
 
 const Footer = () => {
     return (
-        <footer className="p-4 bg-white shadow md:px-6 md:py-8 dark:bg-gray-900">
-            <div className="sm:flex sm:items-center sm:justify-center">
+        <footer className="p-4 shadow md:px-6 md:py-8 bg-gray-900">
+            <div className="flex items-center justify-center">
                 <Image alt="logo" src={"/simple_logo_red.svg"} width="65" height={"30"} className="h-8 mr-3" />
-                <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Mi Bicla</span>
+                <span className="self-center text-2xl font-semibold whitespace-nowrap text-white">Mi Bicla</span>
                 { /* <ul className="flex flex-wrap items-center mb-6 text-sm text-gray-500 sm:mb-0 dark:text-gray-400">
                     <li>
                         <a href="#" className="mr-4 hover:underline md:mr-6 ">About</a>

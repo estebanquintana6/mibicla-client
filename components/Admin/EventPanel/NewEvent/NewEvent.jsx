@@ -27,7 +27,8 @@ const NewEvent = () => {
         price: false,
         capacity: false,
         distance: false,
-        description: false
+        description: false,
+        poster: false
     });
 
     const [tags, setTags] = useState([]);
@@ -42,6 +43,8 @@ const NewEvent = () => {
     const capacityRef = useRef();
     const descriptionRef = useRef();
     const tagRef = useRef();
+
+    const posterInputRef = useRef(null)
 
     const [startLat, setStartLat] = useState(20.589035);
     const [startLng, setStartLng] = useState(-100.3897596);
@@ -58,26 +61,30 @@ const NewEvent = () => {
         err["capacity"] = (!isNotZero(capacityRef.current.value));
         err["distance"] = (!isNotEmpty(distanceRef.current.value));
         err["description"] = (!isNotEmpty(descriptionRef.current.value));
+        err["poster"] = !(posterInputRef.current.files.length > 0);
         setErrors({ ...err });
         return Object.values(err).every((v) => v == false);
     }
 
     const createEvent = async () => {
         try {
-            const { status } = await axios.post("/events/register", {
-                name: nameRef.current.value,
-                description: descriptionRef.current.value,
-                time: timeRef.current.value,
-                place: placeRef.current.value,
-                date: dateRef.current.value,
-                difficulty: difficultyRef.current.value,
-                capacity: capacityRef.current.value,
-                distance: distanceRef.current.value,
-                price: priceRef.current.value,
-                tags: tags,
-                startLat: startLat,
-                startLng: startLng,
-            });
+
+            let formData = new FormData();
+            formData.append("name", nameRef.current.value);
+            formData.append("description", descriptionRef.current.value)
+            formData.append("time", timeRef.current.value);
+            formData.append("place", placeRef.current.value);
+            formData.append("date", dateRef.current.value);
+            formData.append("difficulty", difficultyRef.current.value);
+            formData.append("capacity", capacityRef.current.value);
+            formData.append("distance", distanceRef.current.value);
+            formData.append("price", priceRef.current.value);
+            formData.append("tags", tags);
+            formData.append("startLat", startLat);
+            formData.append("startLng", startLng);
+            formData.append("poster", posterInputRef.current.files[0]);
+
+            const { status } = await axios.post("/events/register", formData);
 
             if (status === 200) {
                 swal("Éxito", "Evento guardado!", "success")
@@ -92,7 +99,6 @@ const NewEvent = () => {
 
     const handleSubmit = () => {
         const validForm = noErrorValidator();
-
         if (validForm) {
             createEvent();
         }
@@ -268,11 +274,12 @@ const NewEvent = () => {
                                     Cartel del evento
                                 </label>
                                 <input
-                                    className={`block w-full text-sm text-gray-900 border border-gray-300 rounded-xl py-1 px-3 cursor-pointer bg-gray-50 focus:outline-none`}
+                                    className={`block w-full text-sm text-gray-900 border border-gray-300 rounded-xl py-1 px-3 cursor-pointer bg-gray-50 focus:outline-none ${errorBorder(errors.poster)}`}
                                     id="photo"
                                     type="file"
                                     accept="image/png, image/jpeg"
                                     placeholder="Imagen"
+                                    ref={posterInputRef}
                                 />
                             </div>
                         </div>

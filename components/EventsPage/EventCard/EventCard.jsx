@@ -1,6 +1,7 @@
 import React from "react";
 import Link from 'next/link';
 
+import { getFile } from "@utils/files";
 
 const EventCard = ({
     _id,
@@ -8,10 +9,9 @@ const EventCard = ({
     date,
     distance,
     place,
-    description,
+    posterUrl,
     tags,
 }) => {
-
     const dateFormatOptions = { 
         weekday: 'long',
         year: 'numeric',
@@ -26,7 +26,7 @@ const EventCard = ({
     return (
         <div className="flex justify-center">
             <div className="max-w-xs rounded-xl overflow-hidden shadow-lg sm:mx-4 my-4 bg-white" key={_id}>
-                <img className="w-full" src="https://v1.tailwindcss.com/img/card-top.jpg" alt="Sunset in the mountains" />
+                <img className="w-full h-64" src={getFile(posterUrl)} alt="Sunset in the mountains" />
                 <div className="px-6 py-4">
                     <div className="font-bold text-xl mb-2">{name}</div>
                     <p className="text-gray-700 text-base">
