@@ -25,8 +25,9 @@ const EventList = ({ eventList, admin }) => {
                     src={"/no_events.svg"}
                     width={300}
                     height={300}
+                    className="mx-auto mb-3"
                 />
-                <h1 className="xs:text-xl md:text-3xl font-bold leading-tight tracking-tight text-gray-900 my-auto ml-6 text-center">
+                <h1 className="xs:text-xl md:text-3xl font-bold leading-tight tracking-tight text-gray-900 mx-auto text-center">
                     No hay eventos por el momento. <br/><span class="text-primary">Estamos trabajando para traer las mejores carreras.</span>
                 </h1>
             </div>
