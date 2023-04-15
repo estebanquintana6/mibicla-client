@@ -3,8 +3,10 @@ import React from "react";
 import Image from 'next/image';
 
 import EventCard from "@components/EventsPage/EventCard";
+import { useIsMobile } from "@utils/isMobile";
 
 const EventList = ({ eventList, admin }) => {
+    const isMobile = useIsMobile();
 
     const gridDisplay = admin ?
         "xs:grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3" :
@@ -22,10 +24,10 @@ const EventList = ({ eventList, admin }) => {
             <div className="absolute left-1/2 top-1/2 -translate-y-1/2 -translate-x-2/4 flex xs:flex-col md:flex-row xs:w-full md:w-auto">
                 <Image
                     alt="logo"
-                    src={"/no_events.svg"}
+                    src={`${isMobile ? "/no_events.svg" : "/no_events_desktop.svg"}`}
                     width={300}
                     height={300}
-                    className="mx-auto mb-3"
+                    className="xs:mx-auto md:mr-6 mb-3"
                 />
                 <h1 className="xs:text-xl md:text-3xl font-bold leading-tight tracking-tight text-gray-900 mx-auto md:my-auto text-center">
                     No hay eventos por el momento. <br/><span class="text-primary">Estamos trabajando para traer las mejores carreras.</span>
