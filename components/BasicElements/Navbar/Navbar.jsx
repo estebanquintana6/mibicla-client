@@ -21,10 +21,11 @@ const Navbar = () => {
         }
 
         getSession()
-            .then(() => {})
+            .then(() => {
+            })
             .catch(() => {
-            localStorage.removeItem("user");
-        });
+                localStorage.removeItem("user");
+            });
     }, [])
 
     const openMenu = (e) => {
