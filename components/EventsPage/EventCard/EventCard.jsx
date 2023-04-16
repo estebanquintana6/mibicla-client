@@ -39,8 +39,10 @@ const EventCard = ({
                         Distancia: {distance}
                     </p>
                 </div>
-                <Link href={`/eventos/${_id}`} className="innline-block bg-secondary rounded-full px-3 py-1 text-sm font-semibold text-tertiary ml-5 mb-2" >Inscripción</Link>
-                <div className="mx-2">
+                <Link href={`/eventos/${_id}`} className="innline-block bg-secondary rounded-full px-3 py-1 text-sm font-semibold text-tertiary ml-5">
+                    Inscripción
+                </Link>
+                <div className="mx-2 mt-3">
                     <hr className="mx-auto w-100 h-1 bg-primary rounded border-0 md:my-4" />
                 </div>
                 <div className="px-6 pt-4 pb-2">

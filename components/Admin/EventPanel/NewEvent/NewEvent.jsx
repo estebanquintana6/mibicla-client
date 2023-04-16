@@ -3,6 +3,7 @@ import Router from 'next/router';
 import getConfig from 'next/config';
 import swal from "sweetalert";
 import axios from "@utils/axios";
+
 import {
     GoogleMap,
     Marker,
@@ -84,7 +85,11 @@ const NewEvent = () => {
             formData.append("startLng", startLng);
             formData.append("poster", posterInputRef.current.files[0]);
 
-            const { status } = await axios.post("/events/register", formData);
+            const { status } = await axios.post("/events/register", formData, {
+                headers: { 
+                    Authorization: localStorage.getItem("user")
+                }
+            });
 
             if (status === 200) {
                 swal("Éxito", "Evento guardado!", "success")

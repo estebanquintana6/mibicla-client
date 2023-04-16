@@ -4,7 +4,8 @@ import Router from 'next/router';
 
 import { PlusIcon } from "@heroicons/react/20/solid";
 
-import EventList from "@components/EventsPage/EventList";
+import EventList from "@admin_components/EventPanel/EventList";
+
 import Button from "@components/BasicElements/Button";
 import AdminSectionTitle from "@components/BasicElements/AdminSectionTitle";
 
