@@ -26,7 +26,7 @@ const EventCard = ({
     return (
         <div className="flex justify-center">
             <div className="max-w-xs rounded-xl overflow-hidden shadow-lg sm:mx-4 my-4 bg-white" key={_id}>
-                <img className="w-full h-64" src={getFile(posterUrl)} alt="Sunset in the mountains" />
+                <img className="xs:h-32 md:h-64 xs:w-32 md:w-64 object-cover" src={getFile(posterUrl)} alt="Sunset in the mountains" />
                 <div className="px-6 py-4">
                     <div className="font-bold text-xl mb-2">{name}</div>
                     <p className="text-gray-700 text-base">
