@@ -23,7 +23,7 @@ const ResourcesSection = () => {
                                 Dale un toque único a tu equipo con materiales de la mejor calidad y precios accesibles.
                                 ¿Aún no tienes tu diseño? nosotros junto con tus ideas diseñaremos el mejor jersey, para el mejor equipo o evento.                             
                             </p>
-                            <Button onClick={goToContactanos}>Más información</Button>
+                            <Button onClick={goToContactanos}>Contáctanos</Button>
                         </div>
 
                     </div>

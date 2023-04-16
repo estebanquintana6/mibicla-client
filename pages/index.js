@@ -7,7 +7,8 @@ import JerseySection from '@components/LandingPage/JerseySection';
 import ProductsSection from '@components/LandingPage/ProductsSection';
 import ContactForm from '@components/LandingPage/ContactForm/ContactForm';
 import Footer from '@components/BasicElements/Footer';
-
+import EventRegister from '@components/EventRegister';
+ 
 export default function Home({ events }) {
   return (
     <>
@@ -25,6 +26,7 @@ export default function Home({ events }) {
         <JerseySection></JerseySection>
         <ContactForm></ContactForm>
         <Footer></Footer>
+        <EventRegister></EventRegister>
       </main>
     </>
   )
