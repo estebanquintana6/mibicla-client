@@ -26,7 +26,6 @@ export default function Home({ events }) {
         <JerseySection></JerseySection>
         <ContactForm></ContactForm>
         <Footer></Footer>
-        <EventRegister></EventRegister>
       </main>
     </>
   )

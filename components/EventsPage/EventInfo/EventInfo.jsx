@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 
+import Router from 'next/router';
+
 import Button from '@components/BasicElements/Button';
 
 import FacebookIcon from '@mui/icons-material/Facebook';
@@ -24,6 +26,7 @@ const EventInfo = ({ event }) => {
     const router = useRouter();
 
     const {
+        _id,
         name,
         date,
         price,
@@ -76,7 +79,9 @@ const EventInfo = ({ event }) => {
                             <hr className="mb-4 w-100 h-1 rounded border-0 bg-tertiary" />
                             <h1 className="align-middle mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl lg:text-6xl text-tertiary">{name}</h1>
                             <h2 className='text-2xl font-extrabold text-center m-3 text-primary tracking-normal '>{dateString}</h2>
-                            <Button small fill className="text-lg font-extrabold text-center text-primary mx-auto tracking-wide">Registrarme</Button>
+                            <Button onClick={() => {
+                                Router.push(`/eventos/registro/${_id}`)
+                            }} small fill className="text-lg font-extrabold text-center text-primary mx-auto tracking-wide">Registrarme</Button>
                         </div>
                     </div>
                 </div>
