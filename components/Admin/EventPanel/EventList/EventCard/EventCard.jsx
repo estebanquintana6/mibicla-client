@@ -5,14 +5,20 @@ import { getFile } from "@utils/files";
 import { useIsMobile } from "@utils/isMobile";
 
 const EventCard = ({
-    _id,
-    name,
-    date,
-    distance,
-    place,
-    posterUrl,
+    event,
+    deleteEvent,
+    updateEvents
 }) => {
     const isMobile = useIsMobile();
+
+    const {
+        _id,
+        name,
+        date,
+        distance,
+        place,
+        posterUrl,
+    } =  event;
 
     const dateFormatOptions = {
         year: 'numeric',
@@ -23,7 +29,10 @@ const EventCard = ({
     const raceDateObj = new Date(date);
     const localeDateString = raceDateObj.toLocaleDateString("es-MX", dateFormatOptions);
 
-
+    const handleDelete = async () => {
+        await deleteEvent();
+        await updateEvents();
+    }
 
     const actionButtons = (
         <div className="flex md:mt-3 xs:py-3 xs:mx-auto md:mx-0">
@@ -33,7 +42,9 @@ const EventCard = ({
             <button class="bg-transparent mx-2 hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded">
                 Editar
             </button>
-            <button class="bg-transparent mx-2 hover:bg-red-600 text-red-600 font-semibold hover:text-white py-2 px-4 border border-red-600 hover:border-transparent rounded">
+            <button 
+                class="bg-transparent mx-2 hover:bg-red-600 text-red-600 font-semibold hover:text-white py-2 px-4 border border-red-600 hover:border-transparent rounded"
+                onClick={handleDelete}>
                 Eliminar
             </button>
         </div>
