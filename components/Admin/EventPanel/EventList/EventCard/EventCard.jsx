@@ -1,5 +1,5 @@
 import React from "react";
-import Link from 'next/link';
+import Router from "next/router";
 
 import { getFile } from "@utils/files";
 import { useIsMobile } from "@utils/isMobile";
@@ -34,12 +34,18 @@ const EventCard = ({
         await updateEvents();
     }
 
+    const toEditPage = () => {
+        Router.push(`/admin/panel/eventos/editar/${_id}`);
+    }
+
     const actionButtons = (
         <div className="flex md:mt-3 xs:py-3 xs:mx-auto md:mx-0">
             <button class="bg-transparent mr-2 hover:bg-blue-500 text-blue-700 font-semibold hover:text-white px-4 border border-blue-500 hover:border-transparent rounded">
                 Registros
             </button>
-            <button class="bg-transparent mx-2 hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded">
+            <button 
+                class="bg-transparent mx-2 hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded"
+                onClick={toEditPage}>
                 Editar
             </button>
             <button 

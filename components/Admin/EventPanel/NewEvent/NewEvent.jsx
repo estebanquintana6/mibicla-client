@@ -45,7 +45,7 @@ const NewEvent = () => {
     const descriptionRef = useRef();
     const tagRef = useRef();
 
-    const posterInputRef = useRef(null)
+    const posterInputRef = useRef(null);
 
     const [startLat, setStartLat] = useState(20.589035);
     const [startLng, setStartLng] = useState(-100.3897596);
@@ -237,7 +237,7 @@ const NewEvent = () => {
                             <hr></hr>
                         </div>
                         <div className="w-full flex overflow-y-auto flex-wrap mt-4 pl-4 mb-4">
-                            <div class="mx-auto">
+                            <div className="mx-auto">
                                 {
                                     isLoaded ? (
                                         <GoogleMap
