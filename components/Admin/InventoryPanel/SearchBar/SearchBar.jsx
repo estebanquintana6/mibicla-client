@@ -8,7 +8,7 @@ import {
 const SearchBar = () => {
     const inputSearchRef = useRef();
 
-    const paginationState = useSelector((state) => state.pagination)
+    const paginationState = useSelector((state) => state.pagination);
     const dispatch = useDispatch();
 
     const onSearchChange = () => {

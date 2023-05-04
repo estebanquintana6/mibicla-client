@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 import EventList from '@components/EventsPage/EventList';
-import AdminSectionTitle from "@components/BasicElements/AdminSectionTitle";
+import AdminSectionTitle from "@components/Admin/Shared/AdminSectionTitle";
 
 const EventsPage = ({ events }) => {
     const [eventList, _] = useState(events);

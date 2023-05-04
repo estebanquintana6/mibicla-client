@@ -10,7 +10,7 @@ import {
     useJsApiLoader
 } from '@react-google-maps/api';
 
-import AdminSectionTitle from "@components/BasicElements/AdminSectionTitle";
+import AdminSectionTitle from "@components/Admin/Shared/AdminSectionTitle";
 
 import { isNotEmpty, isNotZero } from "@utils/validators";
 
