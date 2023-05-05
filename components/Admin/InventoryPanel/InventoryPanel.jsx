@@ -20,17 +20,39 @@ const InventoryPanel = () => {
         Router.push('/admin/panel/inventario/nuevo');
     }
 
+    const toCategoryPage = () => {
+        Router.push('/admin/panel/categoria');
+    }
+
+    const toNewBrandPage = () => {
+        Router.push('/admin/panel/marca/nuevo');
+    }
+
     return (
         <Provider store={store}>
             <section className="p-4 sm:ml-64">
                 <AdminSectionTitle title={"Inventario"} />
                 <ActionBar>
-                    <Button small fill onClick={toNewProductPage}>
-                        <div className="flex align-middle">
-                            <PlusIcon className="inline h-[20px] my-auto mr-1" />
-                            Nuevo producto
-                        </div>
-                    </Button>
+                    <div className='flex xs:flex-wrap md:flex-nowrap'>
+                        <Button small fill onClick={toNewProductPage} className="mx-2 xs:mt-2 md:mt-0 xs:w-[150pt] md:w-auto">
+                            <div className="flex align-middle">
+                                <PlusIcon className="inline h-[20px] my-auto mr-1 xs:ml-auto" />
+                                <span className="xs:mr-auto">Nuevo producto</span>
+                            </div>
+                        </Button>
+                        <Button small fill onClick={toCategoryPage} className="mx-2 xs:mt-2 md:mt-0 xs:w-[150pt] md:w-auto">
+                            <div className="flex align-middle">
+                                <PlusIcon className="inline h-[20px] my-auto mr-1 xs:ml-auto" />
+                                <span className="xs:mr-auto">Categorías</span>
+                            </div>
+                        </Button>
+                        <Button small fill onClick={toNewBrandPage} className="ml-2 xs:mt-2 md:mt-0 xs:w-[150pt] md:w-auto">
+                            <div className="flex align-middle">
+                                <PlusIcon className="inline h-[20px] my-auto mr-1 xs:ml-auto" />
+                                <span className="xs:mr-auto">Marcas</span>
+                            </div>
+                        </Button>
+                    </div>
                 </ActionBar>
                 <SearchBar />
                 <ProductList />
