@@ -25,7 +25,7 @@ const InventoryPanel = () => {
     }
 
     const toNewBrandPage = () => {
-        Router.push('/admin/panel/marca/nuevo');
+        Router.push('/admin/panel/marca');
     }
 
     return (
