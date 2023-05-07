@@ -4,7 +4,7 @@ import ProductPhotos from "./ProductPhotos";
 
 const ProductView = ({ product }) => {
     return (
-        <section className="px-8 py-16">
+        <section className="px-28 py-16 max-w-7xl">
             <div className="grid grid-cols-2 gap-x-8 items-start">
                 <ProductPhotos />
                 <div>
