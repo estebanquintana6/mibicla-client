@@ -22,9 +22,9 @@ export default function PanelEventos({ events }) {
 
 export async function getServerSideProps() {
     const { data } = await axios.get('/events');
-    return { 
-        props: { 
+    return {
+        props: {
             events: data
         }
     }
-  }
+}

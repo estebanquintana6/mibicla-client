@@ -4,7 +4,9 @@ import Sidebar from "@components/Admin/Sidebar";
 
 import InventoryPanel from '@components/Admin/InventoryPanel';
 
-export default function PanelInventario() {
+import axios from "@utils/axios";
+
+export default function PanelInventario({ categories }) {
     return (
         <>
             <Head>
@@ -14,7 +16,16 @@ export default function PanelInventario() {
                 <link rel="icon" href="/simple_logo_red.svg" />
             </Head>
             <Sidebar />
-            <InventoryPanel />
+            <InventoryPanel categories={categories} />
         </>
     )
 }
+
+export async function getServerSideProps() {
+    const { data } = await axios.get('/category');
+    return {
+      props: {
+        categories: data
+      }
+    }
+  }

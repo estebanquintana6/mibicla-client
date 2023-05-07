@@ -14,7 +14,7 @@ import Button from "@components/BasicElements/Button";
 
 import { store } from '@store/adminInventory/store';
 
-const InventoryPanel = () => {
+const InventoryPanel = ({ categories }) => {
 
     const toNewProductPage = () => {
         Router.push('/admin/panel/inventario/nuevo');
@@ -54,7 +54,7 @@ const InventoryPanel = () => {
                         </Button>
                     </div>
                 </ActionBar>
-                <SearchBar />
+                <SearchBar categories={categories} />
                 <ProductList />
             </section>
         </Provider>
