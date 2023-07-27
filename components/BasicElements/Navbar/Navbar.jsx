@@ -58,7 +58,7 @@ const Navbar = () => {
                             <Link href="/" className="px-4 py-2 font-semibold text-tertiary rounded">Home</Link>
                         </li>
                         <li className="flex flex-row justify-center">
-                            <a href="#" className="px-4 py-2 font-semibold text-tertiary rounded">Tienda</a>
+                            <Link href="/inventario" className="px-4 py-2 font-semibold text-tertiary rounded">Inventario</Link>
                         </li>
                         <li className="flex flex-row justify-center">
                             <a href="#">
@@ -106,7 +106,7 @@ const Navbar = () => {
                                     <li>
                                         <Link href="/" className="px-4 py-2 font-semibold text-white rounded">Home</Link>
                                     </li>
-                                    <li><a href="#" className="px-4 py-2 font-semibold text-white rounded">Tienda</a></li>
+                                    <li><Link href="/inventario" className="px-4 py-2 font-semibold text-white rounded">Inventario</Link></li>
                                     <li><Link href="/eventos" className="px-4 py-2 font-semibold text-white rounded">Eventos</Link></li>
                                     <li><Link href="/#contactanos" className="px-4 py-2 font-semibold text-white rounded">Contáctanos</Link></li>
                                     { user &&
